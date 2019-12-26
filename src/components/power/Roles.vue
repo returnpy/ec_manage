@@ -169,9 +169,7 @@ export default {
       if (confirmResult !== 'confirm') {
         return this.$message.info('人怎么可以如此反复无常!')
       }
-      console.log(role, rightId)
       const { data: res } = await this.$http.delete(`roles/${role}/rights/${rightId}`)
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('删除权限失败!')
       }

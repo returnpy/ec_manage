@@ -221,7 +221,6 @@ export default {
       }
 
       const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`, { rid: this.selectedRoleId })
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('更新角色失败!')
       }
@@ -258,7 +257,6 @@ export default {
       }
 
       const { data: res } = await this.$http.delete('users/' + id)
-      console.log(res)
 
       if (res.meta.status !== 200) {
         return this.$message.error('删除用户失败!')
@@ -293,7 +291,6 @@ export default {
     async showEditDialog (id) {
       const { data: res } = await this.$http.get('users/' + id)
 
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('查询用户信息失败!')
       }

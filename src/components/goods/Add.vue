@@ -283,7 +283,6 @@ export default {
             item.attr_vals.length === 0 ? [] : item.attr_vals.split(',')
         })
         this.manyTableData = res.data
-        console.log(this.manyTableData)
       } else if (this.activeIndex === '2') {
         const { data: res } = await this.$http.get(
           `categories/${this.cateId}/attributes`,

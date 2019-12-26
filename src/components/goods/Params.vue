@@ -202,7 +202,6 @@ export default {
         attr_sel: row.attr_sel,
         attr_vals: row.attr_vals.join(',')
       })
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('修改参数项失败!')
       }
@@ -253,7 +252,6 @@ export default {
 
       // 删除的业务逻辑
       const { data: res } = await this.$http.delete(`categories/${this.cateId}/attributes/${id}`)
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('删除参数失败!')
       }

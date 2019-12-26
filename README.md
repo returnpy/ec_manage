@@ -38,3 +38,5 @@ token
 富文本编辑器 vue-quill-edit
 
 vue-table-with-tree-grid
+
+nprogress
